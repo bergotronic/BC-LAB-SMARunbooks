@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Runbook>
+  <Name>BugConnector-Initiate</Name>
+  <Tag>BugZilla</Tag>
+  <Configuration>
+    <Description>
+    </Description>
+    <LogDebug>True</LogDebug>
+    <LogVerbose>True</LogVerbose>
+    <LogProgress>True</LogProgress>
+  </Configuration>
+  <Published>
+    <Definition>workflow BugConnector-Initiate
+{
+    #Bugzilla Connector Global Variables
+    $BugZilla_DatabaseServer = "UBUNUTU_SRV1"
+    $BugZilla_DatabaseName = "bugs"
+    $BugZilla_SCSMDatabaseServer = "BC-SCSM"
+    $BugZilla_SCSMDatabseName = "ServiceManager"
+        
+    Write-Output "Variables Set!"
+    
+    
+    
+    Write-Output "Starting Processing Runbook!"
+    #Call Process Runbook
+    BugConnector-Process -SCSMServer $BugZilla_SCSMDatabaseServer
+    
+    Write-Output "Completed Processing Runbook!"
+    
+}</Definition>
+  </Published>
+  <Draft>
+    <Definition>Draft Not Unique</Definition>
+  </Draft>
+  <Schedules>
+    <ScheduleName>BugZilla Connector Schedule</ScheduleName>
+    <ScheduleDescription>
+    </ScheduleDescription>
+    <ScheduleType>DailySchedule</ScheduleType>
+    <ScheduleNextRun>02/16/2015 20:00:00</ScheduleNextRun>
+    <ScheduleExpiryTime>12/31/9999 08:00:00</ScheduleExpiryTime>
+    <ScheduleDayInterval>1</ScheduleDayInterval>
+  </Schedules>
+</Runbook>

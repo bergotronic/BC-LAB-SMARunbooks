@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Runbook>
+  <Name>ExportRunbookSchedule</Name>
+  <Tag>
+  </Tag>
+  <Configuration>
+    <Description>
+    </Description>
+    <LogDebug>False</LogDebug>
+    <LogVerbose>False</LogVerbose>
+    <LogProgress>False</LogProgress>
+  </Configuration>
+  <Published>
+    <Definition>No Published Version</Definition>
+  </Published>
+  <Draft>
+    <Definition>workflow ExportRunbookSchedule
+{
+   
+    #Call the Export-SMARunbookToXML Runbook with 2 params
+    Export-SMARunbookToXML -ExportDirectory 'D:\Exports' -RunbookName '*'
+         
+    
+}</Definition>
+  </Draft>
+</Runbook>

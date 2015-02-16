@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Runbook>
+  <Name>DSC-Start</Name>
+  <Tag>
+  </Tag>
+  <Configuration>
+    <Description>
+    </Description>
+    <LogDebug>False</LogDebug>
+    <LogVerbose>False</LogVerbose>
+    <LogProgress>False</LogProgress>
+  </Configuration>
+  <Published>
+    <Definition>No Published Version</Definition>
+  </Published>
+  <Draft>
+    <Definition>workflow DSC-Start
+{
+   Param( 
+        [String]$DSCServer
+		[String]$DSCPullServi
+	)
+    
+    
+    
+}</Definition>
+  </Draft>
+</Runbook>

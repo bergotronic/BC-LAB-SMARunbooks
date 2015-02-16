@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Runbook>
+  <Name>Invoke-GIT_Pull</Name>
+  <Tag>
+  </Tag>
+  <Configuration>
+    <Description>
+    </Description>
+    <LogDebug>False</LogDebug>
+    <LogVerbose>False</LogVerbose>
+    <LogProgress>False</LogProgress>
+  </Configuration>
+  <Published>
+    <Definition>workflow Invoke-GIT_Pull
+{
+    Inlinescript{
+    . (Resolve-Path "$env:LOCALAPPDATA\GitHub\shell.ps1")
+    }
+}</Definition>
+  </Published>
+  <Draft>
+    <Definition>workflow Invoke-GIT_Pull
+{
+    Inlinescript{
+    . (Resolve-Path "$env:LOCALAPPDATA\GitHub\shell.ps1")
+ 
+    git-pull
+    }
+}</Definition>
+  </Draft>
+</Runbook>
